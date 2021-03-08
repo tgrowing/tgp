@@ -1,0 +1,16 @@
+PODS:
+  - tgp (0.0.1)
+
+DEPENDENCIES:
+  - tgp (from `../tgp/`)
+
+EXTERNAL SOURCES:
+  tgp:
+    :path: "../tgp/"
+
+SPEC CHECKSUMS:
+  tgp: d901610e67f2d7e1ae44169292dc66a0ad7ae34c
+
+PODFILE CHECKSUM: 49a7c36bee028605f17d313d2d5208556d603ab5
+
+COCOAPODS: 1.9.1
