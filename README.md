@@ -9,7 +9,7 @@
 通过 CocoaPods 安装，在 podfile 里添加：
 
 ```
-	pod 'tgp', '~> x.x.x'
+pod 'tgp', '~> x.x.x'
 ```
 	
 ## 初始化SDK
