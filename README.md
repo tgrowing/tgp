@@ -6,11 +6,14 @@
 
 ## 接入SDK
 
-通过 CocoaPods 安装，在 podfile 里添加：
+* 通过 CocoaPods 安装，在 podfile 里添加：
 
 ```
 pod 'tgp', '~> x.x.x'
 ```
+* 配置 info.plist
+![info.plist截图](https://raw.githubusercontent.com/tgrowing/tgp/main/Resources/info.plist.png)
+
 	
 ## 初始化SDK
 参考 demo 工程中 AppDelegate.m 文件中 startBeacon 方法。
@@ -27,6 +30,10 @@ pod 'tgp', '~> x.x.x'
 * 设置 日志上报域名
 ```
 [BeaconBaseInterface setUploadURL:@"XXXX"];
+```
+* 启用
+```
+[BeaconBaseInterface enableAnalytics:nil gatewayIP:nil];
 ```
 
 ### 事件上报
