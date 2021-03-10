@@ -42,7 +42,7 @@
     NSString *eventName = self.eventNameTextField.text;
     NSString *eventParamsStr = self.eventParamsTextField.text;
     NSDictionary *params = [self getDictionaryFromJson:eventParamsStr];
-    [BeaconBaseInterface onDirectUserAction:eventName isSucceed:YES elapse:0 size:0 params:params];
+    [BeaconBaseInterface onDirectUserAction:@"yiqi_test" isSucceed:YES elapse:0 size:0 params:params];
 }
 
 - (IBAction)onUndirectReportClick:(UIButton *)sender {

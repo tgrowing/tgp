@@ -50,7 +50,6 @@
 				A70613404CA90600DB5455F0 /* Pods-Demo.debug.xcconfig */,
 				45EFFDABCF6A363868AF9E8C /* Pods-Demo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

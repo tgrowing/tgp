@@ -29,18 +29,20 @@
 - (void)startBeacon {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-#if DEBUG == 1
+
         [BeaconBaseInterface setLogLevel:10];
-#endif
+
         NSString *appKey = [[NSUserDefaults standardUserDefaults] objectForKey:@"appkey"];
         [BeaconBaseInterface setAppKey:appKey];
         
         // 私有化必须设置
         NSString *uploadURL = [[NSUserDefaults standardUserDefaults] objectForKey:@"uploadurl"];
         [BeaconBaseInterface setUploadURL:uploadURL];
-        
+
         NSString *stratergyURL = [[NSUserDefaults standardUserDefaults] objectForKey:@"stratergyurl"];
         [BeaconBaseInterface setStratergyURL:stratergyURL];
+        
+        [BeaconBaseInterface enableAnalytics:nil gatewayIP:nil];
     });
 }
 
