@@ -11,7 +11,7 @@
 ```
 pod 'tgp', '~> x.x.x'
 ```
-* 配置 info.plist
+* 配置 info.plist (若上报支持 https，则不用设置)
 ![info.plist截图](https://raw.githubusercontent.com/tgrowing/tgp/main/Resources/info.plist.png)
 
 	
