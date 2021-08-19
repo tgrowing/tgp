@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "tgp"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.3"
   spec.summary      = "tgp framework, aim to growth."
   spec.description  = <<-DESC
   tgp framework, help customers grow.
