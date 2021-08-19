@@ -42,4 +42,11 @@ THE SOFTWARE.
   spec.source       = { :git => "https://github.com/tgrowing/tgp.git", :tag => "#{spec.version}"  }
   spec.vendored_frameworks  = "BeaconAPI_Base.framework"
   spec.static_framework = true
+
+  # https://github.com/CocoaPods/CocoaPods/issues/10065
+  spec.pod_target_xcconfig = {
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+  }
+  spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+
 end
