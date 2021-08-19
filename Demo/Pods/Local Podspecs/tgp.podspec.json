@@ -1,6 +1,6 @@
 {
   "name": "tgp",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "summary": "tgp framework, aim to growth.",
   "description": "tgp framework, help customers grow.",
   "homepage": "https://github.com/tgrowing",
@@ -16,8 +16,14 @@
   },
   "source": {
     "git": "https://github.com/tgrowing/tgp.git",
-    "tag": "0.0.1"
+    "tag": "0.0.3"
   },
   "vendored_frameworks": "BeaconAPI_Base.framework",
-  "static_framework": true
+  "static_framework": true,
+  "pod_target_xcconfig": {
+    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64"
+  },
+  "user_target_xcconfig": {
+    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64"
+  }
 }
