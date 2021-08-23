@@ -1,6 +1,6 @@
 {
   "name": "tgp",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "summary": "tgp framework, aim to growth.",
   "description": "tgp framework, help customers grow.",
   "homepage": "https://github.com/tgrowing",
@@ -16,7 +16,7 @@
   },
   "source": {
     "git": "https://github.com/tgrowing/tgp.git",
-    "tag": "0.0.3"
+    "tag": "0.0.4"
   },
   "vendored_frameworks": "BeaconAPI_Base.framework",
   "static_framework": true,

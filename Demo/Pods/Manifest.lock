@@ -1,5 +1,5 @@
 PODS:
-  - tgp (0.0.3)
+  - tgp (0.0.4)
 
 DEPENDENCIES:
   - tgp (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  tgp: 15b91b60aa3e2945c93d67dda56186a7d86a41d5
+  tgp: 71f3b7f98cf9bed2e5e8b8ee454a2305bfa08b02
 
 PODFILE CHECKSUM: 3fa1d95e80f3bfdb2b05c623244fb21cbcd40c53
 
