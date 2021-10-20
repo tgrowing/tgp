@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -31,7 +33,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1tN-04-55z">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1tN-04-55z">
                                 <rect key="frame" x="355" y="253" width="31" height="30"/>
                                 <state key="normal" title="保存"/>
                                 <connections>
@@ -49,7 +51,7 @@
                                     <constraint firstAttribute="height" constant="38" id="O9u-aA-lOd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" systemColor="systemPinkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="参数 （JSON 文本）" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JC2-y5-QuZ">
@@ -62,28 +64,47 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Adn-hb-q4K">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Adn-hb-q4K">
                                 <rect key="frame" x="306" y="498" width="77" height="30"/>
                                 <state key="normal" title="非实时上报"/>
                                 <connections>
                                     <action selector="onUndirectReportClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eOc-Ir-txe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xbd-E7-SjD">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xbd-E7-SjD">
                                 <rect key="frame" x="201" y="498" width="62" height="30"/>
                                 <state key="normal" title="实时上报"/>
                                 <connections>
                                     <action selector="onDirectReportClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wBM-bG-oxj"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHG-n1-l7k">
+                                <rect key="frame" x="37" y="616" width="96" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="内置浏览器"/>
+                                <connections>
+                                    <action selector="openWebView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kIn-rj-QXG"/>
+                                    <segue destination="OPu-Om-Lma" kind="show" id="fGb-3U-tp8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="辅助工具" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ck3-cv-dvL">
+                                <rect key="frame" x="37" y="578" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="tjc-0s-JW4" firstAttribute="trailing" secondItem="JC2-y5-QuZ" secondAttribute="trailing" id="3SH-ly-hrH"/>
+                            <constraint firstItem="iHG-n1-l7k" firstAttribute="leading" secondItem="Ck3-cv-dvL" secondAttribute="leading" id="4n3-YG-Ioj"/>
                             <constraint firstItem="1tN-04-55z" firstAttribute="top" secondItem="Uwv-40-po4" secondAttribute="bottom" constant="23" id="A7E-dX-ouH"/>
                             <constraint firstItem="w5A-uB-WAj" firstAttribute="leading" secondItem="Uwv-40-po4" secondAttribute="leading" id="BXz-As-1zp"/>
+                            <constraint firstItem="Ck3-cv-dvL" firstAttribute="top" secondItem="Xbd-E7-SjD" secondAttribute="top" constant="80" id="Bwf-Zi-007"/>
                             <constraint firstItem="Xbd-E7-SjD" firstAttribute="top" secondItem="Adn-hb-q4K" secondAttribute="top" id="C2d-e2-gLF"/>
                             <constraint firstItem="j4Q-xA-bFF" firstAttribute="top" secondItem="w5A-uB-WAj" secondAttribute="bottom" constant="17" id="E1d-BA-xZQ"/>
+                            <constraint firstItem="Ck3-cv-dvL" firstAttribute="leading" secondItem="w5A-uB-WAj" secondAttribute="leading" id="FsB-Kx-73g"/>
                             <constraint firstItem="1tN-04-55z" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="IGV-Mp-BCQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kiI-co-Jsp" secondAttribute="trailing" constant="28" id="KIo-w3-UDd"/>
                             <constraint firstItem="tjc-0s-JW4" firstAttribute="leading" secondItem="JC2-y5-QuZ" secondAttribute="leading" id="KKr-Fe-fbY"/>
@@ -101,6 +122,7 @@
                             <constraint firstItem="Xbd-E7-SjD" firstAttribute="top" secondItem="tjc-0s-JW4" secondAttribute="bottom" constant="9" id="kTg-vZ-o24"/>
                             <constraint firstItem="JC2-y5-QuZ" firstAttribute="top" secondItem="j4Q-xA-bFF" secondAttribute="bottom" constant="18" id="kyT-au-fQm"/>
                             <constraint firstItem="j4Q-xA-bFF" firstAttribute="trailing" secondItem="Uwv-40-po4" secondAttribute="trailing" id="m8G-bh-YQM"/>
+                            <constraint firstItem="iHG-n1-l7k" firstAttribute="top" secondItem="Ck3-cv-dvL" secondAttribute="bottom" constant="17" id="mb6-Rc-A5B"/>
                             <constraint firstItem="Dua-zp-fsk" firstAttribute="leading" secondItem="kiI-co-Jsp" secondAttribute="leading" id="n3P-FB-e2k"/>
                             <constraint firstItem="Xbd-E7-SjD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="nL9-9v-Rvo"/>
                             <constraint firstItem="kiI-co-Jsp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="51" id="qZe-sc-j80"/>
@@ -109,13 +131,13 @@
                             <constraint firstItem="Adn-hb-q4K" firstAttribute="top" secondItem="JC2-y5-QuZ" secondAttribute="bottom" constant="55" id="uAx-gq-cO0"/>
                             <constraint firstItem="w5A-uB-WAj" firstAttribute="top" secondItem="Uwv-40-po4" secondAttribute="bottom" constant="89" id="uH7-fc-Iqn"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="appkeyTextField" destination="kiI-co-Jsp" id="Qqz-eD-XrE"/>
                         <outlet property="errorLabel" destination="tjc-0s-JW4" id="ElV-79-4II"/>
                         <outlet property="eventNameTextField" destination="j4Q-xA-bFF" id="OAm-fc-7l2"/>
                         <outlet property="eventParamsTextField" destination="JC2-y5-QuZ" id="1tT-OU-IBq"/>
+                        <outlet property="openWebView" destination="iHG-n1-l7k" id="7Jr-6o-gJf"/>
                         <outlet property="stratergyURLTextField" destination="Uwv-40-po4" id="BkQ-mF-G8c"/>
                         <outlet property="uploadURLTextField" destination="Dua-zp-fsk" id="sTx-jw-Puf"/>
                     </connections>
@@ -124,5 +146,60 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="119.86607142857142"/>
         </scene>
+        <!--Web View Controller-->
+        <scene sceneID="Uby-zi-3ml">
+            <objects>
+                <viewController id="OPu-Om-Lma" customClass="WebViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ca8-tQ-8eZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入访问地址" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jw6-4V-UcK">
+                                <rect key="frame" x="19" y="20" width="304" height="34"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no" returnKeyType="go"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVZ-Am-1EV">
+                                <rect key="frame" x="337" y="20" width="67" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="访问"/>
+                                <connections>
+                                    <action selector="openUrl:" destination="OPu-Om-Lma" eventType="touchUpInside" id="n7P-mi-DcF"/>
+                                </connections>
+                            </button>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zbh-vt-LwX">
+                                <rect key="frame" x="0.0" y="91" width="414" height="710"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eOE-Ke-Ruf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sv6-CM-FcY"/>
+                    <connections>
+                        <outlet property="openUrlBtn" destination="rVZ-Am-1EV" id="olS-JQ-Rm0"/>
+                        <outlet property="urlTextView" destination="jw6-4V-UcK" id="UyS-j4-cOa"/>
+                        <outlet property="webView" destination="Zbh-vt-LwX" id="EoK-vD-gQI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CNl-Fl-IxZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="902.89855072463774" y="119.86607142857142"/>
+        </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

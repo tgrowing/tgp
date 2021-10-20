@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *eventNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *eventParamsTextField;
 @property (weak, nonatomic) IBOutlet UILabel *errorLabel;
+@property (weak, nonatomic) IBOutlet UIButton *openWebView;
 
 @end
 
@@ -68,6 +69,11 @@
         self.errorLabel.text = nil;
     }
     return retDic;
+}
+
+
+- (IBAction)openWebView:(id)sender {
+    
 }
 
 @end

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A89960727200801002480B1 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A89960627200801002480B1 /* WebViewController.m */; };
+		8A89960927200BCD002480B1 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A89960827200BCD002480B1 /* WebKit.framework */; };
 		A7CF8FDB25F5E61000D0FC3F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CF8FDA25F5E61000D0FC3F /* AppDelegate.m */; };
 		A7CF8FE125F5E61000D0FC3F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CF8FE025F5E61000D0FC3F /* ViewController.m */; };
 		A7CF8FE425F5E61000D0FC3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7CF8FE225F5E61000D0FC3F /* Main.storyboard */; };
@@ -18,6 +20,9 @@
 
 /* Begin PBXFileReference section */
 		45EFFDABCF6A363868AF9E8C /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
+		8A89960527200800002480B1 /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		8A89960627200801002480B1 /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		8A89960827200BCD002480B1 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		A70613404CA90600DB5455F0 /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		A7CF8FD625F5E61000D0FC3F /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7CF8FD925F5E61000D0FC3F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -37,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A89960927200BCD002480B1 /* WebKit.framework in Frameworks */,
 				CE08621C389E8DDCA672FBF9 /* Pods_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,6 +84,8 @@
 				A7CF8FDA25F5E61000D0FC3F /* AppDelegate.m */,
 				A7CF8FDF25F5E61000D0FC3F /* ViewController.h */,
 				A7CF8FE025F5E61000D0FC3F /* ViewController.m */,
+				8A89960527200800002480B1 /* WebViewController.h */,
+				8A89960627200801002480B1 /* WebViewController.m */,
 				A7CF8FE225F5E61000D0FC3F /* Main.storyboard */,
 				A7CF8FE525F5E61100D0FC3F /* Assets.xcassets */,
 				A7CF8FE725F5E61100D0FC3F /* LaunchScreen.storyboard */,
@@ -90,6 +98,7 @@
 		F1D1FDC8BFE15E92A3191F09 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8A89960827200BCD002480B1 /* WebKit.framework */,
 				B0E4EBDF0DAEE7E46DBAE11D /* Pods_Demo.framework */,
 			);
 			name = Frameworks;
@@ -194,6 +203,7 @@
 				A7CF8FE125F5E61000D0FC3F /* ViewController.m in Sources */,
 				A7CF8FDB25F5E61000D0FC3F /* AppDelegate.m in Sources */,
 				A7CF8FEC25F5E61100D0FC3F /* main.m in Sources */,
+				8A89960727200801002480B1 /* WebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,13 +345,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TYELATSY8G;
+				DEVELOPMENT_TEAM = JXGKU2PM5C;
 				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.beacondemo.zacard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
