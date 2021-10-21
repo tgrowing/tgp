@@ -22,6 +22,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
+    [self.webView evaluateJavaScript:@"navigator.userAgent" completionHandler:^(id result, NSError *error) {
+        NSString *newUserAgent = [NSString stringWithFormat:@"%@ %@", result, @"isApp"];
+        [self.webView setCustomUserAgent:newUserAgent];
+      }];
 }
 
 /*
